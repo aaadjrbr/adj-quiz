@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADJ's Quiz</title>
+</head>
+
+<link rel=stylesheet href="./css/style.css">
+<link rel="shortcut icon" href="adjicon.png" >
+
+
+<body>
+
+    <div><!-- audio area-->
+  <audio id="correctAudio">
+    <source src="./assets/audios/correct.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="incorrectAudio">
+    <source src="./assets/audios/incorrect.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ending audio area-->
+    </div>
+
+
+  <!--Pop up area -->
+  <div id="overlay"></div>
+  <div id="popup">
+    <img src="./assets/images/pop-up.png" alt="Welcome Image A">
+    <button id="closeBtn" onclick="closePopup()">Close</button>
+  </div>
+<!-- End of Pop up area -->
+  <h1 class="animate-charcter-h1">ADJ's Quiz</h1><br/>
+  <img src="./assets/images/profile_pic.JPG" alt="adenilson-profile-pic" class="rounded-image">
+
+  <h2 class="animated-text">Hey there! It's Adenilson here and this is my personal quiz.</h2>
+    <hr />
+
+  <div class="quiz">
+    <div class="question">
+      <p>1 - What is my favorite food?</p>
+    </div>
+    <div class="answer">
+      <input class="textbox myButton" placeholder="Answer here" type="text" onkeydown="handleKeyPress(event, 'checkAnswer1')" id="answer1">
+      <button class="button-round" onclick="checkAnswer1()">Submit</button>
+      <p id="result1"></p><hr />
+    </div>
+    <div class="question">
+      <p>2 - What is my favorite color?</p>
+    </div>
+    <div class="answer">
+      <input class="textbox" placeholder="Answer here" type="text" onkeydown="handleKeyPress(event, 'checkAnswer2')" id="answer2">
+      <button class="button-round myButton" onclick="checkAnswer2()">Submit</button>
+      <p id="result2"></p><hr />
+    </div>
+    <div class="question"><p>
+      3 - What is the TV Show/Soap Opera that I love?</p>
+    </div>
+    <div class="answer">
+      <input class="textbox" placeholder="Answer here" type="text" onkeydown="handleKeyPress(event, 'checkAnswer3')" id="answer3">
+      <button class="button-round myButton" onclick="checkAnswer3()">Submit</button>
+      <p id="result3"></p><hr />
+    </div>
+    <div class="question">
+      <p>4 - What is a food/dish that I don't like?</p>
+    </div>
+    <div class="answer">
+      <input class="textbox" placeholder="Answer here" type="text" onkeydown="handleKeyPress(event, 'checkAnswer4')" id="answer4">
+      <button class="button-round myButton" onclick="checkAnswer4()">Submit</button>
+      <p id="result4"></p>
+    </p><hr />
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="animate-charcter"> Thank you!</h3>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <footer>This was created by Adenilson Ribeiro. ©</footer>
+
+
+<script src="./js/script.js"></script>
+</body>
+
+
+
+</html>
